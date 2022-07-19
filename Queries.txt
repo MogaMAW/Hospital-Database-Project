@@ -1,0 +1,151 @@
+
+Write 5 Queries using COUNTS, JOINS AND CONCATINATING and other queries.
+
+			A).CONCATINATING
+1.A Query to return the bill of a patient named "KYESWA FUAD".
+
+## a).get the id of the patient
+	SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%";
+
+##b).use id to link tables
+	SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%");
+
+##c).get the bill
+	SELECT bill FROM admission_discharge WHERE id IN(SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%"));
+40000
+
+			B). COUNTS
+
+1. A query to count the number of patient
+SELECT COUNT(names) FROM patient;
+
+2.A query to count the number of doctor
+SELECT COUNT(doctor_names) FROM doctor;
+
+			C).JOINS
+
+1).A Query to return names of patients and doctors 
+SELECT names,doctor_names FROM patient JOIN treatment JOIN doctor ON doctor.doctor_id=treatment.doctor_id AND treatment.patient_id=patient.patient_id;      
+
+
+2). A Query to return doctor names and patient names where the patinet is ONYEKA RONNIE
+SELECT doctor_names, names FROM patient,doctor,treatment WHERE patient.patient_id=treatment.patient_id AND treatment.doctor_id = doctor.doctor_id AND 
+patient.names LIKE "%WAMALA CRANMER%";
+
+3).A Query to return the name and ward_no of a patient called AYEBARE MOSES.
+SELECT ward_no,names FROM patient,treatment,admission_discharge WHERE patient.patient_id =treatment.patient_id AND treatment.admission_discharge_id=admission_discharge.id AND patient.names LIKE "%AYEBARE MOSES%";
+
+		OTHER QUERIES:
+1). Query to return all content from table patient.
+SELECT * FROM patient;
+
+2).Query to return all content from table doctor
+SELECT * FROM doctor; 
+
+3).Query to return all content from table treatment
+SELECT * FROM treatment;
+
+4).Query to return all content from table treatment
+SELECT * FROM treatment;
+
+5).Query to return all content from table admission_discharge
+SELECT * FROM admission_discharge;
+
+6).Query to return all content from table pharmacy
+SELECT * FROM pharmacy; 
+
+
+		
+			OUTPUTS OF CODES
+
+		A).CONCATINATING
+1.A querry to 
+
+sqlite> SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%";
+11
+sqlite>
+
+sqlite> SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%");
+11
+sqlite>
+
+sqlite> SELECT bill FROM admission_discharge WHERE id IN(SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%"));
+40000
+sqlite>
+
+		B). COUNTS
+1.A Query to count the number of patient
+sqlite> SELECT COUNT(names) FROM patient;
+45
+sqlite>
+
+2.A query to count the number of doctor
+sqlite>
+sqlite> SELECT COUNT(doctor_names) FROM doctor;
+45
+sqlite>
+
+
+
+		c).JOINS
+1). 
+sqlite> SELECT doctor_names, names FROM patient,doctor,treatment WHERE patient.patient_id=treatment.patient_id AND treatment.doctor_id = doctor.doctor_id AND 
+patient.names LIKE "%WAMALA CRANMER%";
+
+
+2).A Query to return the name and ward_no of a patient called AYEBARE MOSES.
+sqlite> SELECT ward_no,names FROM patient,treatment,admission_discharge WHERE patient.patient_id =treatment.patient_id AND treatment.admission_discharge_id=admission_discharge.id AND patient.names LIKE "%AYEBARE MOSES%";
+1544|AYEBARE MOSES
+
+3).A Query to return names of patients and doctors 
+sqlite> SELECT names,doctor_names FROM patient JOIN treatment JOIN doctor ON doctor.doctor_id=treatment.doctor_id AND treatment.patient_id=patient.patient_id;      
+MUGABYOMU KEVIN|MUGABYOMU KEVIN
+DOROTHY E.|DOROTHY E.
+ARON OCAYI|ARON OCAYI
+ASIKU PATRICK |ASIKU PATRICK
+EDWARD MUKIBI|EDWARD MUKIBI
+KARIM AKAYI|KARIM AKAYI
+JOSHUA SAALI|JOSHUA SAALI
+KAMULI ANTHONY ERIYA|KAMULI ANTHONY ERIYA
+ONYEKA RONNIE |ONYEKA RONNIE
+JOAN NAKATO EVERLYIN|JOAN NAKATO EVERLYIN
+KYESWA FUAD |KYESWA FUAD
+SSEMBAJJWE NOORDEAN|SSEMBAJJWE NOORDEAN
+WANZAGIRO RYAN |WANZAGIRO RYAN
+KIMERA GORDON|KIMERA GORDON
+NAKANUWAGI SALMAH |NAKANUWAGI SALMAH
+DR. KAWUMA DAVIDSTONE|DR. KAWUMA DAVIDSTONE
+PRETTY ELVIS|PRETTY ELVIS
+ANNET KATWESIGIREE|ANNET KATWESIGIREE
+AYEBARE MOSES|AYEBARE MOSES
+LILLY HUSSEIN|LILLY HUSSEIN
+NKATA JOSHUA L.|NKATA JOSHUA L.
+SAMANTHA |SAMANTHA
+EMMANUEL GUNGA DERRICK|EMMANUEL GUNGA DERRICK
+CNYTHIA P.|CNYTHIA P.
+FAUZI ISSA|FAUZI ISSA
+BRIAN HENDRIX|BRIAN HENDRIX
+ADRIAN K.|ADRIAN K.
+WAMALA CRANMER|WAMALA CRANMER
+ISAAC SHAMMAH|ISAAC SHAMMAH
+MARTHA JACINTA|MARTHA JACINTA
+SUMAYA AMAL ANGEL|SUMAYA AMAL ANGEL
+IZAIAH MUKISA COOLKID|IZAIAH MUKISA COOLKID
+AINEMBABAZI RITAH |AINEMBABAZI RITAH
+OLUM FRANCIS |OLUM FRANCIS
+MABIRA CONRAD|MABIRA CONRAD
+BUDDA JAMILLA|BUDDA JAMILLA
+CHRIS BREEZY |CHRIS BREEZY
+ALEX PIUS|ALEX PIUS
+BIRUNF|BIRUNF
+HASSAN BAHATI MUKISA|HASSAN BAHATI MUKISA
+MUNJI JAMES ALALA|MUNJI JAMES ALALA
+JACINTAH QUEEN|JACINTAH QUEEN
+SIMON PETER|SIMON PETER
+LOOR JACOBSON|LOOR JACOBSON
+NINZIZA RONNIE|NINZIZA RONNIE
+sqlite>   
+
+
+
+		

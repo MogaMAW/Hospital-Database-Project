@@ -1,0 +1,28 @@
+MOGA MUZAMIL ABDUL WAHAB  S21B23/013 A94166
+
+PROJECT: HOSPITAL DATABASE  
+I have created a hospital database consisting of 5 (five) tables patient, doctor, admission_discharge, pharmacy and treatment.
+Table treatment is my join table.
+
+The table patient has attributes patient_id(Primary Key),names,occupation,age,gender,disease and address_location.
+The table doctor has attributes doctor_id(Primary Key),doctor_name,doctor_age,doctor_gender.
+The table admission_discharge has attributes id(Primary Key),ward_no,date_of_admission,date_of_discharge,bill,amount_paid,balance.
+The table pharmacy has attriburs pharmacy_id(Primary Key),medicine_name,price.
+
+The join table is table treatment and has attributes patient_id,pharmacy_id,doctor_id,admission_discharge_id.
+
+The Entity-Relationship Diagram(ERD) for the database is uploaded on Github as a .doc file. 
+The Relational Mode (Schema) Diagram for the database is uploaded as well as a PNG file and a PDF file .
+
+SQL codes for creating the tables in the database are stored in an .SQL source file named SQL CODES FOR TABLES AND DATABASE.txt 
+
+Codes for creating the tables in the database are stored in an .txt file named CODE FOR DATABASE.
+
+The CSV sample data is uploaded as PROJECT DATA.csv
+
+Database with imported data is moga.db
+
+Code for importing data into the database is saved in the python source file named "hospitaldatabase" also uploaded.
+
+SQL queries are submitted in the Queries.txt
+
