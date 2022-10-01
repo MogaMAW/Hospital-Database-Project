@@ -1,3 +1,3 @@
 # Hospital-Database-Project
 This is my database coursework project. <br />
-Most of 
+Most of the
