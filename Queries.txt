@@ -1,7 +1,7 @@
 
 Write 5 Queries using COUNTS, JOINS AND CONCATINATING and other queries.
 
-			A).CONCATINATING
+			A).CONCATINATING.
 1.A Query to return the bill of a patient named "KYESWA FUAD".
 
 ## a).get the id of the patient
