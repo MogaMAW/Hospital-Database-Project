@@ -56,7 +56,7 @@ SELECT * FROM pharmacy;
 
 
 		
-			OUTPUTS OF CODES
+			OUTPUTS OF CODES:
 
 		A).CONCATINATING
 1.A querry to 
