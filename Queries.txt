@@ -73,7 +73,7 @@ sqlite> SELECT bill FROM admission_discharge WHERE id IN(SELECT admission_discha
 40000
 sqlite>
 
-		B). COUNTS
+		B). COUNTS.
 1.A Query to count the number of patient
 sqlite> SELECT COUNT(names) FROM patient;
 45
