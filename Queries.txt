@@ -14,7 +14,7 @@ Write 5 Queries using COUNTS, JOINS AND CONCATINATING and other queries.
 	SELECT bill FROM admission_discharge WHERE id IN(SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%"));
 40000
 
-			B). COUNTS
+			B). COUNTS 
 
 1. A query to count the number of patient
 SELECT COUNT(names) FROM patient;
