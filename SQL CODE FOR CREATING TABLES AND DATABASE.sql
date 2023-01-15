@@ -9,6 +9,7 @@ CREATE TABLE `patient` (
   `address_location` text
 );
 
+
 CREATE TABLE `doctor` (
   `doctor_id` int PRIMARY KEY,
   `docotr_names` text,
