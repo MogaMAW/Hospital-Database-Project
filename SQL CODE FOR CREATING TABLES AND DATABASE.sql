@@ -17,6 +17,7 @@ CREATE TABLE `doctor` (
   `doctor_gender` text
 );
 
+
 CREATE TABLE `admission_discharge` (
   `id` int PRIMARY KEY,
   `ward_no` int,
