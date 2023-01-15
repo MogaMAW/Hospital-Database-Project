@@ -1,4 +1,3 @@
-
 CREATE TABLE `patient` (
   `patient_id` int PRIMARY KEY,
   `names` text,
