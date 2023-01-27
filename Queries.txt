@@ -10,7 +10,7 @@ Write 5 Queries using COUNTS, JOINS AND CONCATINATING and other queries.
 ##b)use id to link tables
 	SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%");
 
-##c)get the bill
+##c) get the bill
 	SELECT bill FROM admission_discharge WHERE id IN(SELECT admission_discharge_id FROM treatment WHERE patient_id IN(SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%"));
 40000
 
