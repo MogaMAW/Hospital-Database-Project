@@ -24,7 +24,7 @@ SELECT COUNT(doctor_names) FROM doctor;
 
 			C)JOINS
 
-1).A Query to return names of patients and doctors 
+1)A Query to return names of patients and doctors 
 SELECT names,doctor_names FROM patient JOIN treatment JOIN doctor ON doctor.doctor_id=treatment.doctor_id AND treatment.patient_id=patient.patient_id;      
 
 
