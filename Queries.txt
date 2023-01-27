@@ -59,7 +59,7 @@ SELECT * FROM pharmacy;
 			OUTPUTS OF CODES:
 
 		A)CONCATINATING
-1.A querry to 
+1)A querry to 
 
 sqlite> SELECT patient_id FROM patient WHERE names LIKE "%KYESWA FUAD%";
 11
