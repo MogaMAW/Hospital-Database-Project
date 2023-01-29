@@ -28,7 +28,7 @@ SELECT COUNT(doctor_names) FROM doctor;
 SELECT names,doctor_names FROM patient JOIN treatment JOIN doctor ON doctor.doctor_id=treatment.doctor_id AND treatment.patient_id=patient.patient_id;      
 
 
-2). A Query to return doctor names and patient names where the patinet is ONYEKA RONNIE.
+2) A Query to return doctor names and patient names where the patinet is ONYEKA RONNIE.
 SELECT doctor_names, names FROM patient,doctor,treatment WHERE patient.patient_id=treatment.patient_id AND treatment.doctor_id = doctor.doctor_id AND 
 patient.names LIKE "%WAMALA CRANMER%";
 
