@@ -16,7 +16,7 @@ Write 5 Queries using COUNTS, JOINS AND CONCATINATING and other queries.
 
 			B)COUNTS 
 
-1A query to count the number of patient
+1)A query to count the number of patient
 SELECT COUNT(names) FROM patient;
 
 2.A query to count the number of doctor
