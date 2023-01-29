@@ -36,7 +36,7 @@ patient.names LIKE "%WAMALA CRANMER%";
 SELECT ward_no,names FROM patient,treatment,admission_discharge WHERE patient.patient_id =treatment.patient_id AND treatment.admission_discharge_id=admission_discharge.id AND patient.names LIKE "%AYEBARE MOSES%";
 
 		OTHER QUERIES:
-1). Query to return all content from table patient.
+1) Query to return all content from table patient.
 SELECT * FROM patient;
 
 2).Query to return all content from table doctor
