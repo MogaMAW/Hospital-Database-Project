@@ -32,7 +32,7 @@ SELECT names,doctor_names FROM patient JOIN treatment JOIN doctor ON doctor.doct
 SELECT doctor_names, names FROM patient,doctor,treatment WHERE patient.patient_id=treatment.patient_id AND treatment.doctor_id = doctor.doctor_id AND 
 patient.names LIKE "%WAMALA CRANMER%";
 
-3).A Query to return the name and ward_no of a patient called AYEBARE MOSES.
+3) A Query to return the name and ward_no of a patient called AYEBARE MOSES.
 SELECT ward_no,names FROM patient,treatment,admission_discharge WHERE patient.patient_id =treatment.patient_id AND treatment.admission_discharge_id=admission_discharge.id AND patient.names LIKE "%AYEBARE MOSES%";
 
 		OTHER QUERIES:
