@@ -16,6 +16,7 @@ with open("project data.csv","r") as file:
 
     reader = csv.DictReader(file)
     
+    
     for row in reader:
         doctor_names = row["names"]
         doctor_age= row["age"]
