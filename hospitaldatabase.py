@@ -6,7 +6,6 @@ open("moga.db","w").close()
 
 db = SQL("sqlite:///moga.db")
 
-
 db.execute("CREATE TABLE doctor(doctor_id INTEGER, doctor_names TEXT, doctor_age INTEGER, doctor_gender TEXT, PRIMARY KEY(doctor_id));")
 db.execute("CREATE TABLE patient(patient_id INTEGER, names TEXT, occupation TEXT,age INTEGER, gender TEXT, disease TEXT, address_location TEXT, PRIMARY KEY (patient_id));")
 db.execute("CREATE TABLE treatment(patient_id INTEGER, pharmacy_id INTEGER, doctor_id INTEGER, admission_discharge_id INTEGER, FOREIGN KEY(patient_id) REFERENCES patient(patient_id),FOREIGN KEY(doctor_id) REFERENCES doctor(doctor_id), FOREIGN KEY(admission_discharge_id) REFERENCES admission_discharge(id), FOREIGN KEY(pharmacy_id) REFERENCES pharmacy(pharmacy_id));")
