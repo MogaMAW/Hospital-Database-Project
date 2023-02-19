@@ -41,5 +41,6 @@ with open("project data.csv","r") as file:
         medicine_name=row["medicine_name"]
         price=row["price"]
         pharmacy_id = db.execute("INSERT INTO pharmacy(medicine_name,price) VALUES (?,?)",medicine_name,price)
+        
 
         db.execute('INSERT INTO treatment(patient_id,pharmacy_id,doctor_id,admission_discharge_id) VALUES((SELECT patient_id FROM patient WHERE patient_id=?),(SELECT pharmacy_id FROM pharmacy WHERE pharmacy_id=?),(SELECT doctor_id FROM doctor WHERE doctor_id=?),(SELECT id FROM admission_discharge WHERE id=?))',patient_id,pharmacy_id,doctor_id,admission_discharge_id)
