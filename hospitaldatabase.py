@@ -1,5 +1,6 @@
 import csv 
 
+
 from cs50 import SQL
 
 open("moga.db","w").close()
