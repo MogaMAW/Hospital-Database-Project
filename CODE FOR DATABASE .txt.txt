@@ -44,6 +44,7 @@ with open("project data.csv","r") as file:
         balance= row["balance"]
         admission_discharge_id = db.execute("INSERT INTO admission_discharge(ward_no,date_of_admission,date_of_discharge,bill,amount_paid,balance) VALUES (?,?,?,?,?,?)",ward_no,date_of_admission,date_of_discharge,bill,amount_paid,balance)
 
+
         medicine_name=row["medicine_name"]
         price=row["price"]
         pharmacy_id = db.execute("INSERT INTO pharmacy(medicine_name,price) VALUES (?,?)",medicine_name,price)
