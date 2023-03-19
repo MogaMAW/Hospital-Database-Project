@@ -8,7 +8,7 @@ CREATE TABLE `patient` ( # creating table patient ie
   `address_location` text
 );
 
-CREATE TABLE `doctor` (
+CREATE TABLE `doctor` ( #creating table doctor 
   `doctor_id` int PRIMARY KEY,
   `docotr_names` text,
   `doctor_age` int,
