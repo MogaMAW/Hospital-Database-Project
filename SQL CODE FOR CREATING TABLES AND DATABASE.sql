@@ -1,4 +1,4 @@
-CREATE TABLE `patient` (
+CREATE TABLE `patient` ( # creating table patient ie
   `patient_id` int PRIMARY KEY,
   `names` text,
   `occupation` text,
