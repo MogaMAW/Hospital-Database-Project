@@ -31,7 +31,7 @@ CREATE TABLE `pharmacy` ( #creating table pharmacy
   `price` int
 );
 
-CREATE TABLE `treatment` (
+CREATE TABLE `treatment` (#creating table treatment 
   `patient_id` int,
   `pharmacy_id` int,
   `doctor_id` int,
