@@ -38,7 +38,7 @@ CREATE TABLE `treatment` (#creating table treatment
   `admission_id` int
 );
 
-ALTER TABLE `treatment` ADD FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`);
+ALTER TABLE `treatment` ADD FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`); #assigning a foreign key 
 
 ALTER TABLE `treatment` ADD FOREIGN KEY (`pharmacy_id`) REFERENCES `pharmacy` (`pharmacy_id`);
 
