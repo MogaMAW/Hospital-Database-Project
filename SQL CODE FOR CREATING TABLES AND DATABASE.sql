@@ -25,7 +25,7 @@ CREATE TABLE `admission_discharge` ( #creating table admission_discharge
   `balance` int
 );
 
-CREATE TABLE `pharmacy` (
+CREATE TABLE `pharmacy` ( #creating table pharmacy 
   `pharmacy_id` int PRIMARY KEY,
   `medicine_name` text,
   `price` int
