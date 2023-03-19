@@ -15,7 +15,7 @@ CREATE TABLE `doctor` ( #creating table doctor
   `doctor_gender` text
 );
 
-CREATE TABLE `admission_discharge` (
+CREATE TABLE `admission_discharge` ( #creating table admission_discharge
   `id` int PRIMARY KEY,
   `ward_no` int,
   `date_of_admission` text,
